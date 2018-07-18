@@ -7,4 +7,13 @@ module.exports = function (gulp) {
     return gulp.src('./src/img/*')
       .pipe(gulp.dest('./dest/img'))
   })
+
+  gulp.task('csv', function () {
+    const del = require('del')
+
+    del('dest/csv/*')
+
+    return gulp.src('./src/csv/*')
+      .pipe(gulp.dest('./dest/csv'))
+  })
 }

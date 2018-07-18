@@ -47,12 +47,19 @@
 
       this.args = typeof args !== 'undefined' ? args : {};
       this.node = typeof this.args.elm !== 'undefined' ? this.args.elm : document.querySelectorAll('.' + REF.clss);
-      this.Init();
+      this.Test();
     }
 
     _createClass(Test, [{
-      key: 'Init',
-      value: function Init() {}
+      key: 'Test',
+      value: function Test() {
+        fetch('csv/test.csv').then(function (res) {
+          return res.text();
+        }).then(function (text) {
+          var elm = document.createTextNode(text);
+          document.body.appendChild(elm);
+        });
+      }
     }]);
 
     return Test;

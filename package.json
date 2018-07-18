@@ -26,6 +26,7 @@
     "all": "gulp all",
     "html": "gulp html",
     "img": "gulp img",
+    "csv": "gulp csv",
     "css": "gulp css",
     "js": "gulp js",
     "server": "gulp server",
